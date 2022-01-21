@@ -1,264 +1,94 @@
 *{
+    list-style-type: none;
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-    list-style: none;
 }
 body{
-    background: #333333;
-    color: rgb(250, 236, 215);
+    background: #fdfdfd;
 }
 header{
-    height: 10vh;
+    margin-top: 6vh;
 }
-header h1{
-    position: absolute;
-    right: 5vw;
-    top: 3vh;
-    font-family: 'Shojumaru', cursive;
+header nav{
+    display: flex;
+   align-items: center;
 }
-.label1{
-    display: block;
-    font-size: 25px;
-    position: fixed;
-    left: 10px;
-    top: 25px;
+.fa-bars{
+    visibility: hidden;
 }
 header nav ul{
-    display: flex ;
-    flex-direction: column;
-    position: fixed;
-    left: -100%;
-    top: 4vh;
-    height: 100vh;
-    background: #5d5c61;
-    width: 100%;
-    align-items: center;
-    row-gap: 9vh;
-    z-index: 1;
-    transition: all .5s ;
-    font-family: 'Nova Slim', cursive;
+    display: flex;
+    position: absolute;
+    right: 0;
 }
-header nav ul a li{
-   width: 100%;
+header nav ul li{
+    margin-right: 30px;
 }
-#check:checked ~ nav ul{
-    left: 0;
+header nav ul li i{
+    margin-right: 3px;
 }
-#l1{
-    margin-top: 3vh;
-}
-.label2{
-   opacity: 1;
-   display: block;
-   position: absolute;
-   right: 10px;
-   top: 20px;
-}
-input, label{
-    display: none;
-}
-a:link{
-    color: rgb(250, 236, 215);
+header nav ul a{
     text-decoration: none;
+    transition: all .1s ease;
 }
-a:visited{
-    color: rgb(250, 236, 215);
-}  
-@media only screen and (min-width: 768px) {
+header nav ul a{
+    color: #333;
+}
+header nav ul a:visited{
+    color : #333;
+}
+header nav ul a:hover{
+    color: rgba(118, 194, 197, 0.815);
+}
+.fa-times-circle{
+    visibility: hidden;
+}
+#checkbtn{
+    visibility: hidden;
+}
+#moon{
+    transition: all .5s ease-in;
+}
+@media only screen and (max-width: 975px) {
     header nav ul{
-        width: 50vw;
+        flex-direction: column;
+        left: -100%;
+        top: 100px;
+        height: 0vh;
+        max-width: 300px;
+        background: red ;
+        transition: all .5s ease-in-out;
     }
-}
-/* this is the landing page */
-.landing{
-    margin-top: 10vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
-    height: max-content;
-}
-.landing article{
-    align-self: center;
-    font-size: 2rem;
-    font-family: 'Overpass Mono', monospace;
-}
-.landing section img{
-    height: 400px;
-    width: 100%;
-    border-radius: 10px;
-    opacity: .4;
-}
-@media screen and (max-width:320px) {
-    .landing article{
+    header nav ul li{
+        margin-bottom: 20px;
+        margin-left: 40px;
+        margin-top: 20px;
+        /* background: red; */
+    }
+    .fa-bars{
+        visibility: visible;
+    }
+    .fa-moon{
         position: relative;
-        top: 0vh;
-        text-align: center;
+        left: 80vw;
+        /* top: 20px; */
     }
-    .landing section img{
-        height: 250px;
-        width: 300px;
+    .fa-sun{
+        position: relative;
+        left: 80vw;
     }
-}
-.about-me{
-    height: 100vh;
-    background: #254e58;
-}
-.about-me h1{
-    text-align: center;
-    text-decoration: underline;
-    font-family: 'Caveat Brush', cursive;
-}
-.about-me section{
-    height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 5vh;
-}
-.about-me section div img{
-    height: 300px;
-    width: 300px;
-}
-#about-collo{
-    font-size: 1.3rem;
-    font-family: 'Overpass Mono', monospace;
-    text-align: center;
-}
-.skills{
-    background: #2f4454;
-    height: 100vh;
-    font-family: 'Oxygen Mono', monospace;
-}
-.skills h1{
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 5vh;
-    font-family: 'Caveat Brush', cursive;
-}
-.skills section{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5vh;
-    text-align: center;
-}
-.skills2 p{
-    margin-top: 10px;
-}
-.contact{
-    height: 100vh;
-    background: #17252a;
-    font-family: 'Oxygen Mono', monospace;
-}
-.contact h1{
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 5vh;
-    font-family: 'Caveat Brush', cursive;
-}
-.contact section{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5vh;
-    justify-content: space-around;
-}
-.contact div{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 2vh;
-}
-.fa-facebook-f{
-    background: #3b5998;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.fa-twitter{
-    background: #08a0e9;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.fa-whatsapp{
-    background: #25d366;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.fa-spotify{
-    background: #1db954;
-    background-clip: text;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-}
-.contact div {
-    margin-top: 30px;
-}
-.contact div form label, .contact div form input{
-    opacity: 1;
-    display: inline-flex;
-}
-#email{
-    height: 35px;
-    width: 250px;
-    border: 1px solid #41b3a3;
-    border-radius: 10px;
-    background: black;
-    color: white;
-}
-#text1{
-    margin-top: 15vh;
-}
-#text2{
-    height: 100px;
-    width: 250px;
-    background: black;
-    color: white;
-    border-radius: 10px;
-    font-size: large;
-}
-#send{
-    margin-top: 5vh;
-    height: 30px;
-    width: 70px;
-}
-@media screen and (max-width:340px){
-    .contact{
-        height: fit-content;
+    .fa-bars{
+        position: relative;
+        left: 10px;
     }
-   .contact section{
-       display: inline-block;
-       position: relative;
-       left: 0;
-       margin-left: 30vw;
-   } 
-   .contact section a{
-       margin: 20px;
-   }
-}
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 40vh;
-    align-items: center;
-}
-footer a{
-    height: 35px;
-    width: 100px;
-    font-family: 'Nova Slim', cursive;
-}
-#p1{
-    text-align: center;
-    font-family: 'Nova Mono', monospace;
+    .fa-times-circle{
+        visibility: visible;
+        position: absolute;
+        right: 20%;
+        margin-bottom: 30px;
+    }
+    .fa-home{
+        margin-top: 15px;
+    }
 }
