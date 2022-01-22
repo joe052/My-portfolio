@@ -158,7 +158,7 @@ header nav ul a:hover{
     }
   }
   #p2{
-    width: 8ch;
+    width: 7.5ch;
     animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
     animation-delay: 5s;
     white-space: nowrap;
