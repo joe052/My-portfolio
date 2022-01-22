@@ -50,8 +50,34 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
         darkMode()
     }
 })
-//links 
-const links = document.querySelectorAll("a")
-links.addEventListener("mouseover",function(){
-    links.style.color = "blue"
+
+const hello = document.querySelector(".landing h1")
+const p1 = document.querySelector("#p1")
+window.addEventListener("load", function(){
+    hello.animate([
+        {transform: 'translate(200px)'}
+    ],{
+        duration: 450,
+        easing: 'ease-in',
+        iterations: 1,
+        delay: 0 ,
+        direction: "normal",
+        fill: "forwards"
+    })
+})
+window.addEventListener('load', function(){
+    var delay1 = 1000; //1 second
+    var delay2 = 5000;
+    var delay3 = 7500;
+     setTimeout(function() {
+         p1.textContent = "I am Tinega Collins"
+}, delay1);
+const p2 = document.querySelector("#p2")
+setTimeout(function() {
+    p2.textContent = "And this is"
+}, delay2);
+const p3 =document.querySelector("#p3")
+setTimeout(function() {
+    p3.style.opacity = "1"
+}, delay3);
 })
