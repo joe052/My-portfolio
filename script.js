@@ -2,7 +2,7 @@
 const nav = document.querySelector(".fa-bars");
 nav.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
-    ul.style.left = "0%"
+    ul.style.left = "10%"
 })
 const navback = document.querySelector(".fa-times-circle");
 navback.addEventListener("click",function(){
