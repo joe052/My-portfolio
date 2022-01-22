@@ -8,7 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #e8f4f7;
+    /* background: #e8f4f7; */
+    background: red !important;
 }
 header{
     margin-top: 6vh;
@@ -105,7 +106,7 @@ header nav ul a:hover{
     #ul1{
         height: 80vh;
         background: cornflowerblue;
-        width: 100%;
+        width: 100vw;
     }
 }
 @media only screen and (max-width: 400px){
