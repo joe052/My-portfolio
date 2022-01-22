@@ -70,7 +70,7 @@ header nav ul a:hover{
         margin-top: 20px;
     }
     header nav ul a{
-        width: 100%;
+        width: 100vw;
         height: 80px;
         background: cornflowerblue;
         position: relative;
