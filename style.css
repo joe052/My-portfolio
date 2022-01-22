@@ -60,7 +60,7 @@ header nav ul a:hover{
         left: -130%;
         top: 100px;
         height: 300px;
-        max-width: 320px;
+        width: 320px;
         transition: all .5s ease-in-out;
         z-index: 1;
     }
@@ -110,7 +110,7 @@ header nav ul a:hover{
 }
 @media only screen and (max-width: 400px){
     #ul1{
-        width: 100vw;
+        min-width: 100vw;
     }    
 }
 .landing{
