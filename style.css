@@ -53,11 +53,6 @@ header nav ul a:hover{
 #moon{
     transition: all .5s ease-in;
 }
-@media only screen and (max-width: 400px){
-    #ul1{
-        width: 100vw;
-    }    
-}
 @media only screen and (max-width: 975px) {
     header nav ul{
         flex-direction: column;
@@ -99,8 +94,8 @@ header nav ul a:hover{
     .fa-times-circle{
         visibility: visible;
         position: absolute;
-        right: 20%;
-        top: 10px;
+        right: 10%;
+        top: 20px;
         margin-bottom: 60px;
     }
     label{
@@ -110,7 +105,13 @@ header nav ul a:hover{
     #ul1{
         height: 80vh;
         background: cornflowerblue;
+        width: 100%;
     }
+}
+@media only screen and (max-width: 400px){
+    #ul1{
+        width: 100vw;
+    }    
 }
 .landing{
     height: 90vh;
