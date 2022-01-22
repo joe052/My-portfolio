@@ -7,7 +7,7 @@ nav.addEventListener("click",function(){
 const navback = document.querySelector(".fa-times-circle");
 navback.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
-    ul.style.left = "-100%"
+    ul.style.left = "-110%"
 })
 
 //dark mode
@@ -74,10 +74,21 @@ window.addEventListener('load', function(){
 }, delay1);
 const p2 = document.querySelector("#p2")
 setTimeout(function() {
-    p2.textContent = "And this is"
+    p2.textContent = "And this"
 }, delay2);
 const p3 =document.querySelector("#p3")
 setTimeout(function() {
-    p3.style.opacity = "1"
+    p3.animate([
+        {transform: 'scale(0)'},
+        {transform: 'scale(.5)'},
+        {transform : 'scale(1)'}
+    ],{
+        duration: 300,
+        easing: 'ease-in',
+        iterations: 1,
+        delay: 0 ,
+        direction: "normal",
+        fill: "forwards"
+    })
 }, delay3);
 })
