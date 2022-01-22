@@ -7,7 +7,7 @@ nav.addEventListener("click",function(){
 const navback = document.querySelector(".fa-times-circle");
 navback.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
-    ul.style.left = "-110%"
+    ul.style.left = "-130%"
 })
 
 //dark mode
@@ -36,7 +36,7 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
     else{
         function darkMode(){
             const body = document.querySelector("body")
-            body.style.background = "white"
+            body.style.background = "#e8f4f7"
             body.style.color = "#333"
             const nav = document.querySelectorAll(".dark")
          nav.forEach(item =>{
@@ -55,9 +55,9 @@ const hello = document.querySelector(".landing h1")
 const p1 = document.querySelector("#p1")
 window.addEventListener("load", function(){
     hello.animate([
-        {transform: 'translate(200px)'}
+        {transform: 'translate(800px)'}
     ],{
-        duration: 450,
+        duration: 300,
         easing: 'ease-in',
         iterations: 1,
         delay: 0 ,
@@ -91,4 +91,15 @@ setTimeout(function() {
         fill: "forwards"
     })
 }, delay3);
+})
+window.addEventListener('scroll',()=>{
+    let content = document.querySelector("#aboutMe");
+    let contentPosition = content.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+    let allContent = document.querySelectorAll(".content");
+    console.log(allContent)
+    if (contentPosition< screenPosition){
+        // allContent.classList.add('active');
+    }
+    ////buuuuuuuggggs
 })
