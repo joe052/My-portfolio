@@ -50,19 +50,28 @@ header nav ul a:hover{
 #checkbtn{
     visibility: hidden;
 }
-#moon{
+/* #moon{
     transition: all .5s ease-in;
+} */
+.fa-bars{
+    position: relative;
+    left: 100px;
+}
+.last{
+    visibility: hidden;
+    font-size: 2px;
 }
 @media only screen and (max-width: 975px) {
     header nav ul{
         flex-direction: column;
         align-items: center;
         left: -130%;
-        top: 100px;
-        height: 300px;
+        top: 5px;
+        min-height: 100vh;
         max-width: 100vw;
         transition: all .5s ease-in-out;
         z-index: 1;
+        background: cornflowerblue;
     }
     header nav ul li{
         margin-bottom: 20px;
@@ -71,7 +80,7 @@ header nav ul a:hover{
     }
     header nav ul a{
         width: 100%;
-        height: 80px;
+        height: 70px;
         background: cornflowerblue;
         position: relative;
         top: 50px;
@@ -81,15 +90,15 @@ header nav ul a:hover{
     }
     .fa-moon{
         position: relative;
-        left: 90vw;
+        left: 93vw;
     }
     .fa-sun{
         position: relative;
-        left: 90vw;
+        left: 93vw;
     }
     .fa-bars{
         position: relative;
-        left: 10px;
+        left:15px;
     }
     .fa-times-circle{
         visibility: visible;
@@ -107,6 +116,11 @@ header nav ul a:hover{
         background: cornflowerblue;
         width: 130%;
     }
+    .last{
+        visibility: visible;
+        font-size: 10px;
+        padding-top: 70px;
+    }
 }
 @media only screen and (max-width: 400px){
     #ul1{
@@ -114,7 +128,7 @@ header nav ul a:hover{
     }    
 }
 .landing{
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -212,8 +226,64 @@ header nav ul a:hover{
   }
   @media only screen and (min-width: 900px){
     #aboutMe img{
-        width: 400px;
+        min-width: 400px;
         height: 400px;
         overflow: hidden;
     }
   }
+  #skills{
+      min-height: 100vh;
+      position: relative;
+  }
+  #skills article{
+      position: absolute;
+      bottom: 0%;
+      min-height: 80vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      gap: 25px;
+      position: relative;
+  }
+  .skills{
+      height: 300px;
+      width: 200px;
+      border: 1px solid black;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+  }
+  .fa-js{
+    color: #f0db4f;
+  }
+  .fa-node-js{
+    color: #303030;
+  }
+  .fa-css3-alt{
+      color: #7fdbff;
+  }
+  .fa-html5{
+      color: rgb(238, 78, 20);
+  }
+  .skillsTitle{
+      text-align: center;
+      text-decoration: underline;
+      position: relative;
+      /* top: 30px; */
+  }
+  .skills h3{
+      text-decoration: underline;
+  }
+  @media screen and (max-width : 1000px){
+      #skills{
+          height: unset;
+      }
+  }
+  /* projects */
+  /* #contact{
+      height: 100vh;
+  } */
