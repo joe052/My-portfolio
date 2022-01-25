@@ -9,6 +9,7 @@ html{
 }
 body{
     background: #e8f4f7;
+    width: min-content;
 }
 header{
     margin-top: 6vh;
@@ -95,13 +96,17 @@ header nav ul a:hover{
     .fa-bars{
         visibility: visible;
     }
+    .new{
+      position: absolute;
+      right: 0;
+    }
     .fa-moon{
-        position: relative;
-        left: 40vw;
+        position: absolute;
+        right: 10px;
     }
     .fa-sun{
-        position: relative;
-        left: 40vw;
+        position: absolute;
+        right: 10px;
     }
     .fa-bars{
         position: relative;
@@ -129,6 +134,7 @@ header nav ul a:hover{
         position: relative;
         top: 200px;
     }
+    
 }
 @media only screen and (max-width: 400px){
     #ul1{
