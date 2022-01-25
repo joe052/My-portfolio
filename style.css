@@ -48,7 +48,13 @@ header nav ul a:hover{
     visibility: hidden;
 }
 #checkbtn{
-    visibility: hidden;
+    visibility: visible;
+    transform: scale(0);
+    position: relative;
+}
+.new{
+    position: relative;
+    left: 100px;
 }
 /* #moon{
     transition: all .5s ease-in;
@@ -90,11 +96,11 @@ header nav ul a:hover{
     }
     .fa-moon{
         position: relative;
-        left: 93vw;
+        left: 80vw;
     }
     .fa-sun{
         position: relative;
-        left: 93vw;
+        left: 80vw;
     }
     .fa-bars{
         position: relative;
@@ -119,7 +125,8 @@ header nav ul a:hover{
     .last{
         visibility: visible;
         font-size: 10px;
-        padding-top: 70px;
+        position: relative;
+        top: 200px;
     }
 }
 @media only screen and (max-width: 400px){
@@ -232,30 +239,100 @@ header nav ul a:hover{
     }
   }
   #skills{
-      min-height: 100vh;
+      min-height: 100vh; 
       position: relative;
+      /* margin-top: 40px; */
   }
-  #skills article{
-      position: absolute;
-      bottom: 0%;
-      min-height: 80vh;
+  .skillsTitle{
+      text-align: center;
+      text-decoration: underline;
+  }
+  #skills .skillsTab{
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      justify-content: center;
       justify-content: space-around;
-      gap: 25px;
-      position: relative;
+      gap: 30px;
+  }
+  .skillsTab article{
+      width: max-content;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
   }
   .skills{
-      height: 300px;
-      width: 200px;
+      min-width: 250px;
+      height: max-content;
       border: 1px solid black;
+      display: grid;
+      row-gap: 30px;
+      padding: 10px;
       border-radius: 10px;
+  }
+  .skills h4{
+      font-size: 20px;
+  }
+  .maindetails{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+  }
+  .details{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between !important;
+      width: 100%;
+      padding-left: 7px;
+      padding-right: 7px;
+  }
+  .range{
+      border: 2px solid black;
+      height: 13px;
+      width: 95%;
+      border-radius: 5px;
+  }
+  .widthrange {
+      height: 100%;
+      border-radius: 4px;
+      width: 60%;
+      /* background: green; */
+  }
+  .javascript{
+    width: 60%;
+    background: #f0db4f !important; 
+  }
+  .node{
+      width: 20%;
+      background: #303030!important;
+  }
+  .css{
+      width: 70%;
+      background: #7fdbff;
+  }
+  .html{
+      width: 95%;
+      background: #ee4e14;
+  }
+  .wordpress{
+      width: 10%;
+      background: #13d0dd;
+  }
+  .python{
+      width: 20%;
+      background: #0084ff;
+  }
+  .fa-python{
+      color: #0084ff;
+  }
+  .brain{
+      width: 30%;
+      background: red;
   }
   .fa-js{
     color: #f0db4f;
@@ -267,23 +344,200 @@ header nav ul a:hover{
       color: #7fdbff;
   }
   .fa-html5{
-      color: rgb(238, 78, 20);
+      color: #ee4e14;
   }
-  .skillsTitle{
-      text-align: center;
-      text-decoration: underline;
-      position: relative;
-      /* top: 30px; */
+  .fa-wordpress{
+      color: #13d0dd;
   }
-  .skills h3{
-      text-decoration: underline;
+  .patience{
+      width: 100%;
+      background: #ff00bf;
   }
-  @media screen and (max-width : 1000px){
-      #skills{
-          height: unset;
-      }
+  .photoshop{
+      width: 50%;
+      background: cornflowerblue;
+  }
+  .git{
+      width: 100%;
+      background: #f1502f;
+  }
+  .fa-git-alt{
+      color: #f1502f;
+  }
+  .linux{
+      background: #8080ff;
+      width: 30%;
   }
   /* projects */
-  /* #contact{
-      height: 100vh;
-  } */
+
+#contact{
+    height: 100vh;
+}
+#contact h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.mail{
+    margin-top: 30px;
+}
+form{
+    margin-top: 40px;
+}
+input,
+.spann,
+label,
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  left: 0;
+  font-size: 10px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+textarea.question{
+    font-size: 25px;
+}
+input.question{
+    font-size: 15px;
+}
+input.question,
+textarea.question {
+  /* font-size: 25px; */
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.question + label,
+textarea.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid red;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label,
+textarea.question:focus + label {
+  width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+  margin-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+  top: -150px;
+  font-size: 23px;
+  color: #333;
+}
+
+input.question:valid + label,
+textarea.question:valid + label {
+  border-color: green;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+  box-shadow: none;
+}
+
+input.question + .labelle > span,
+textarea.question + .labelle > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 25px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+/* From cssbuttons.io by @adamgiebl */
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: rgb(43, 187, 231);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+   
+button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+   
+button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+} 
+button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+} 
+button:hover span {
+    transform: translateX(5em);
+}
+button:active {
+    transform: scale(0.95);
+} 
+@keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+    to {
+     transform: translateY(-0.1em);
+    }
+}
+form{
+    margin-top: 50px;
+}
+button{
+    margin-top: 30px;
+}
+    
