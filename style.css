@@ -9,7 +9,6 @@ html{
 }
 body{
     background: #e8f4f7;
-    width: min-content;
 }
 header{
     margin-top: 6vh;
@@ -103,9 +102,11 @@ header nav ul a:hover{
     .fa-moon{
         position: absolute;
         right: 10px;
+        top: -5px;
     }
     .fa-sun{
         position: absolute;
+        top: -5px;
         right: 10px;
     }
     .fa-bars{
@@ -132,7 +133,7 @@ header nav ul a:hover{
         visibility: visible;
         font-size: 10px;
         position: relative;
-        top: 200px;
+        top: 100px;
     }
     
 }
@@ -420,7 +421,7 @@ textarea.question {
   border-radius: 2px;
   margin: 0;
   border: none;
-  width: 100%;
+  width: 90%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
@@ -443,7 +444,7 @@ textarea.question + label {
 
 input.question:focus + label,
 textarea.question:focus + label {
-  width: 100%;
+  width: 90%;
 }
 
 input.question:focus,
@@ -541,6 +542,7 @@ button:active {
 }
 form{
     margin-top: 50px;
+    margin-left: 20px
 }
 button{
     margin-top: 30px;
@@ -554,4 +556,6 @@ button{
 .iconss{
   margin: 10px;
 }
-    
+#tm{
+  text-align: center;
+}
