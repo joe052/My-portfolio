@@ -57,7 +57,8 @@ header nav ul a:hover{
     left: 100px;
 }
 /* #moon{
-    transition: all .5s ease-in;
+    position: relative;
+    right: 50px;
 } */
 .fa-bars{
     position: relative;
@@ -96,11 +97,11 @@ header nav ul a:hover{
     }
     .fa-moon{
         position: relative;
-        left: 80vw;
+        left: 40vw;
     }
     .fa-sun{
         position: relative;
-        left: 80vw;
+        left: 40vw;
     }
     .fa-bars{
         position: relative;
@@ -147,7 +148,7 @@ header nav ul a:hover{
 }
 .landing h1{
     font-size: 70px;
-    width: max-content;
+    /* width: max-content; */
     background-image: linear-gradient(45deg,#2193b0,#6dd5ed);
     background-clip: text;
     -webkit-background-clip: text;
@@ -251,7 +252,6 @@ header nav ul a:hover{
       margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: center;
       justify-content: center;
       justify-content: space-around;
@@ -371,7 +371,7 @@ header nav ul a:hover{
   /* projects */
 
 #contact{
-    height: 100vh;
+    height: max-content;
 }
 #contact h2{
     text-align: center;
@@ -414,7 +414,7 @@ textarea.question {
   border-radius: 2px;
   margin: 0;
   border: none;
-  width: 80%;
+  width: 100%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
@@ -437,7 +437,7 @@ textarea.question + label {
 
 input.question:focus + label,
 textarea.question:focus + label {
-  width: 80%;
+  width: 100%;
 }
 
 input.question:focus,
@@ -487,10 +487,9 @@ textarea.question + .labelle > span {
   -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
-/* From cssbuttons.io by @adamgiebl */
 button {
     font-family: inherit;
-    font-size: 20px;
+    font-size: 15px;
     background: rgb(43, 187, 231);
     color: white;
     padding: 0.7em 1em;
@@ -539,5 +538,14 @@ form{
 }
 button{
     margin-top: 30px;
+}
+.contacticons{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.iconss{
+  margin: 10px;
 }
     
