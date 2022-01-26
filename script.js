@@ -1,7 +1,7 @@
 //nav button
 const nav = document.querySelector(".fa-bars");
+const ul = document.querySelector("header nav ul");
 nav.addEventListener("click",function(){
-    const ul = document.querySelector("header nav ul");
     ul.style.left = "0%"
 })
 const navback = document.querySelector(".fa-times-circle");
@@ -9,7 +9,6 @@ navback.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
     ul.style.left = "130%"
 })
-
 //dark mode
 //new check button
 
@@ -92,6 +91,7 @@ setTimeout(function() {
     })
 }, delay3);
 });
+//windows toggle this bad boy later
 const windows = document.querySelector("#windows");
 console.log(windows)
 windows.addEventListener("click",function(e){
@@ -100,9 +100,13 @@ windows.addEventListener("click",function(e){
     windows.classList.add("sss")
     console.log(document.querySelector(".sss"))
     document.querySelector(".sss").addEventListener("click",function(){
-        console.log("wtf")
         ul.style.left = "-130%"
         document.querySelector(".sss").classList.remove("sss")
     })
     
+})
+//moon2
+const moon2 = document.querySelector("#moon2");
+moon2.addEventListener("click",function(){
+
 })

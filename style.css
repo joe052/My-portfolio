@@ -9,14 +9,21 @@ html{
 }
 body{
     background: #e8f4f7;
+    /* border-right: 1px solid green; */
+}
+#home{
+    position: absolute;
+    top: 0;
 }
 header{
     margin-top: 6vh;
+    font-size: 15px !important;
 }
 header nav{
     display: flex;
    align-items: center;
-   border-bottom: .1px solid black;
+   /* border-bottom: .1px dotted black;
+   border-top: .1px dotted black; */
 }
 .fa-bars{
     visibility: hidden;
@@ -153,6 +160,7 @@ header nav ul a:hover{
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow-x: hidden !important;
 }
 .landing p,h1{
     margin: 10px;
@@ -192,13 +200,14 @@ header nav ul a:hover{
     }
   }
   #p2{
-    width: 7.5ch;
+    width: 8.3ch;
     animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
     animation-delay: 5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
     font-size: 1.3rem;
+    font-family: monospace;
   }
   #p3{
       transform: scale(0);
@@ -321,7 +330,7 @@ header nav ul a:hover{
   }
   .node{
       width: 20%;
-      background: #303030!important;
+      background: green !important;
   }
   .css{
       width: 70%;
@@ -381,13 +390,32 @@ header nav ul a:hover{
       width: 30%;
   }
   /* projects */
-
-#contact{
-    height: max-content;
+#projects{
+      min-height: 100vh;
 }
+#projects h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+  /* contact */
+  #contact{
+    height: max-content;
+    overflow-x: hidden;
+}
+@media only screen and (max-width:975px) {
+    #contact{
+        height: 90vh;
+    }
+}
+
 #contact h2{
     text-align: center;
     text-decoration: underline;
+}
+.mail h3{
+    position: relative;
+    left: 30px;
 }
 .mail{
     margin-top: 30px;
@@ -580,6 +608,10 @@ button{
           display: none;
       }
   }
+  #downbar{
+      overflow-x: unset !important;
+      z-index: 1000;
+  }
   #downbar ul{
       height: min-content;
       width: 100vw;
@@ -590,11 +622,15 @@ button{
       bottom: 0px;
       border: 1px solid black;
       background: purple;
+      overflow-x: unset !important;
   }
   #downbar ul li{
-      /* border-left: 1px solid black;
-      border-right: 1px solid black; */
       width: max-content;
       height: 100%;
       padding: 4px;
+      overflow-x: unset !important;
+  }
+  #downbar ul a:active{
+      background: black;
+      color: black;
   }
