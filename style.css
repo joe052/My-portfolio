@@ -8,7 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #e8f4f7;
+    background:  black;
+    color: white;
     /* border-right: 1px solid green; */
 }
 #home{
