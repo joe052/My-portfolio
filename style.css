@@ -8,8 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background:  black;
-    color: white;
+    background:  white;
     /* border-right: 1px solid green; */
 }
 #home{
@@ -18,7 +17,7 @@ body{
 }
 header{
     margin-top: 6vh;
-    font-size: 15px !important;
+    font-size: 13px !important;
 }
 header nav{
     display: flex;
