@@ -7,7 +7,7 @@ nav.addEventListener("click",function(){
 const navback = document.querySelector(".fa-times-circle");
 navback.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
-    ul.style.left = "-130%"
+    ul.style.left = "130%"
 })
 
 //dark mode
@@ -91,63 +91,18 @@ setTimeout(function() {
         fill: "forwards"
     })
 }, delay3);
-})
-window.addEventListener('scroll',()=>{
-    let content = document.querySelector("#aboutMe");
-    let contentPosition = content.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight;
-    let allContent = document.querySelectorAll(".content");
-    console.log(allContent)
-    if (contentPosition< screenPosition){
-        // allContent.classList.add('active');
-    }
-    ////buuuuuuuggggs
 });
-"use strict"; 
-
-const body = document.body;
-const bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
-const menu = body.querySelector(".menu");
-const menuItems = menu.querySelectorAll(".menu__item");
-const menuBorder = menu.querySelector(".menu__border");
-let activeItem = menu.querySelector(".active");
-
-function clickItem(item, index) {
-
-    menu.style.removeProperty("--timeOut");
-    
-    if (activeItem == item) return;
-    
-    if (activeItem) {
-        activeItem.classList.remove("active");
-    }
-
-    
-    item.classList.add("active");
-    // body.style.backgroundColor = bgColorsBody[index];
-    activeItem = item;
-    offsetMenuBorder(activeItem, menuBorder);
-    
-    
-}
-
-function offsetMenuBorder(element, menuBorder) {
-
-    const offsetActiveItem = element.getBoundingClientRect();
-    const left = Math.floor(offsetActiveItem.left - menu.offsetLeft - (menuBorder.offsetWidth  - offsetActiveItem.width) / 2) +  "px";
-    menuBorder.style.transform = `translate3d(${left}, 0 , 0)`;
-
-}
-
-offsetMenuBorder(activeItem, menuBorder);
-
-menuItems.forEach((item, index) => {
-
-    item.addEventListener("click", () => clickItem(item, index));
+const windows = document.querySelector("#windows");
+console.log(windows)
+windows.addEventListener("click",function(e){
+    const ul = document.querySelector("header nav ul");
+    ul.style.left = "0%"
+    windows.classList.add("sss")
+    console.log(document.querySelector(".sss"))
+    document.querySelector(".sss").addEventListener("click",function(){
+        console.log("wtf")
+        ul.style.left = "-130%"
+        document.querySelector(".sss").classList.remove("sss")
+    })
     
 })
-
-window.addEventListener("resize", () => {
-    offsetMenuBorder(activeItem, menuBorder);
-    menu.style.setProperty("--timeOut", "none");
-});

@@ -16,6 +16,7 @@ header{
 header nav{
     display: flex;
    align-items: center;
+   border-bottom: .1px solid black;
 }
 .fa-bars{
     visibility: hidden;
@@ -70,6 +71,7 @@ header nav ul a:hover{
 }
 @media only screen and (max-width: 975px) {
     header nav ul{
+        position: fixed;
         flex-direction: column;
         align-items: center;
         left: -130%;
@@ -134,6 +136,9 @@ header nav ul a:hover{
         font-size: 10px;
         position: relative;
         top: 100px;
+    }
+    .home2{
+        border-top: .5px solid black;
     }
     
 }
@@ -558,4 +563,38 @@ button{
 }
 #tm{
   text-align: center;
+  margin-top: 20px;
 }
+.svg-icon {
+    width: 17px;
+    height: 17px;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: black;
+  }
+  @media only screen and (min-width:975px) {
+      #downbar{
+          display: none;
+      }
+  }
+  #downbar ul{
+      height: min-content;
+      width: 100vw;
+      padding: 7px;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0px;
+      border: 1px solid black;
+      background: purple;
+  }
+  #downbar ul li{
+      /* border-left: 1px solid black;
+      border-right: 1px solid black; */
+      width: max-content;
+      height: 100%;
+      padding: 4px;
+  }
