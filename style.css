@@ -110,11 +110,9 @@ header nav ul a:hover{
     .fa-moon{
         position: absolute;
         right: 10px;
-        top: -5px;
     }
     .fa-sun{
         position: absolute;
-        top: -5px;
         right: 10px;
     }
     .fa-bars{
