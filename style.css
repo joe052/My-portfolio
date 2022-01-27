@@ -8,7 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background:  white;
+    background:  #141212;
+    color: white;
     /* border-right: 1px solid green; */
 }
 #home{
@@ -30,8 +31,8 @@ header nav{
 }
 header nav ul{
     display: flex;
-    position: absolute;
-    right: 0;
+    justify-self: flex-end;
+    margin-left: auto;
 }
 header nav ul li{
     margin-right: 30px;
@@ -44,10 +45,10 @@ header nav ul a{
     transition: all .1s ease;
 }
 header nav ul a{
-    color: #333;
+    color: white;
 }
 header nav ul a:visited{
-    color : #333;
+    color : white;
 }
 header nav ul a:hover{
     color: rgba(118, 194, 197, 0.815);
@@ -64,10 +65,9 @@ header nav ul a:hover{
     position: relative;
     left: 100px;
 }
-/* #moon{
-    position: relative;
-    right: 50px;
-} */
+#moon{
+    font-size: 25px;
+}
 .fa-bars{
     position: relative;
     left: 100px;
@@ -81,13 +81,12 @@ header nav ul a:hover{
         position: fixed;
         flex-direction: column;
         align-items: center;
-        left: -130%;
+        left: 130%;
         top: 5px;
         min-height: 100vh;
         max-width: 100vw;
         transition: all .5s ease-in-out;
         z-index: 1;
-        background: cornflowerblue;
     }
     header nav ul li{
         margin-bottom: 20px;
@@ -97,12 +96,12 @@ header nav ul a:hover{
     header nav ul a{
         width: 100%;
         height: 70px;
-        background: cornflowerblue;
         position: relative;
         top: 50px;
     }
     .fa-bars{
         visibility: visible;
+        font-size: 20px;
     }
     .new{
       position: absolute;
@@ -128,6 +127,7 @@ header nav ul a:hover{
         right: 10%;
         top: 20px;
         margin-bottom: 60px;
+        font-size: 20px;
     }
     label{
         position: relative;
@@ -135,8 +135,9 @@ header nav ul a:hover{
     }
     #ul1{
         height: 80vh;
-        background: cornflowerblue;
-        width: 130%;
+        background: linear-gradient(45deg,#A33327,#a82618d5);
+        
+        width: 100%;
     }
     .last{
         visibility: visible;
@@ -155,7 +156,7 @@ header nav ul a:hover{
     }    
 }
 .landing{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -168,15 +169,14 @@ header nav ul a:hover{
 }
 .landing h1{
     font-size: 70px;
-    /* width: max-content; */
-    background-image: linear-gradient(45deg,#2193b0,#6dd5ed);
+    background-image: #C7493A;
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    color: transparent;
+    color: #C7493A;
     position: relative;
-    right: 800px;
     width: 100%;
+    overflow-x: hidden;
 }
 #p1{
     width: 19ch;
@@ -225,24 +225,24 @@ header nav ul a:hover{
       }
   }
   #aboutMe{
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      /*align-items: center; */
       flex-wrap: wrap;
-      gap: 5%;
+      gap: 30px;
+      row-gap: 0px;
       width: 100vw;
-  }
-  .content{
-      opacity: 1;
-      transform: scale(1);
   }
   #aboutMe h2{
       align-self: flex-start;
       text-align: center;
       width: 100%;
-      margin-top: 20px;
+      /* margin-top: 20px; */
       text-decoration: underline;
+  }
+  #aboutMe article{
+      align-self: center;
   }
   #aboutMe img{
       width: 270px;
@@ -263,7 +263,6 @@ header nav ul a:hover{
   #skills{
       min-height: 100vh; 
       position: relative;
-      /* margin-top: 40px; */
   }
   .skillsTitle{
       text-align: center;
@@ -295,6 +294,7 @@ header nav ul a:hover{
       row-gap: 30px;
       padding: 10px;
       border-radius: 10px;
+      background: linear-gradient(90deg,#AD8174,#928078);
   }
   .skills h4{
       font-size: 20px;
@@ -322,7 +322,6 @@ header nav ul a:hover{
       height: 100%;
       border-radius: 4px;
       width: 60%;
-      /* background: green; */
   }
   .javascript{
     width: 60%;
@@ -621,7 +620,7 @@ button{
       position: fixed;
       bottom: 0px;
       border: 1px solid black;
-      background: purple;
+      background: #C7493A;
       overflow-x: unset !important;
   }
   #downbar ul li{

@@ -9,6 +9,15 @@ navback.addEventListener("click",function(){
     const ul = document.querySelector("header nav ul");
     ul.style.left = "130%"
 })
+const windows = document.querySelector("#windows");
+windows.addEventListener("click",function(){
+    ul.style.left = "0%"
+})
+ul.addEventListener("click",function(e){
+    if(e.target.className == "home2" || "about"  || "skills1" || "projects" || "contact"){
+        ul.style.left = "130%"
+    }
+})
 //dark mode
 //new check button
 
@@ -19,7 +28,23 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
     if (check === true){
         function darkMode(){
             const body = document.querySelector("body")
-            body.style.background = "#333"
+            body.style.background = "white"
+            body.style.color = "#141212"
+            const nav = document.querySelectorAll(".dark")
+         nav.forEach(item =>{
+             item.style.color = "white"
+         })
+         moon.classList.remove("far");
+         moon.classList.remove("fa-sun");
+         moon.classList.add("fas");
+         moon.classList.add("fa-moon");
+        }
+        darkMode()
+    }
+    else{
+        function darkMode(){
+            const body = document.querySelector("body")
+            body.style.background = "#141212"
             body.style.color = "white"
             const nav = document.querySelectorAll(".dark")
          nav.forEach(item =>{
@@ -32,37 +57,6 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
         }
         darkMode()
     }
-    else{
-        function darkMode(){
-            const body = document.querySelector("body")
-            body.style.background = "#e8f4f7"
-            body.style.color = "#333"
-            const nav = document.querySelectorAll(".dark")
-         nav.forEach(item =>{
-             item.style.color = "#333"
-         })
-         moon.classList.remove("far");
-         moon.classList.remove("fa-sun");
-         moon.classList.add("fas");
-         moon.classList.add("fa-moon");
-        }
-        darkMode()
-    }
-})
-
-const hello = document.querySelector(".landing h1")
-const p1 = document.querySelector("#p1")
-window.addEventListener("load", function(){
-    hello.animate([
-        {transform: 'translate(800px)'}
-    ],{
-        duration: 300,
-        easing: 'ease-in',
-        iterations: 1,
-        delay: 0 ,
-        direction: "normal",
-        fill: "forwards"
-    })
 })
 window.addEventListener('load', function(){
     var delay1 = 1000; //1 second
@@ -91,22 +85,3 @@ setTimeout(function() {
     })
 }, delay3);
 });
-//windows toggle this bad boy later
-const windows = document.querySelector("#windows");
-console.log(windows)
-windows.addEventListener("click",function(e){
-    const ul = document.querySelector("header nav ul");
-    ul.style.left = "0%"
-    windows.classList.add("sss")
-    console.log(document.querySelector(".sss"))
-    document.querySelector(".sss").addEventListener("click",function(){
-        ul.style.left = "-130%"
-        document.querySelector(".sss").classList.remove("sss")
-    })
-    
-})
-//moon2
-const moon2 = document.querySelector("#moon2");
-moon2.addEventListener("click",function(){
-
-})
