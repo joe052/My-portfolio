@@ -110,10 +110,12 @@ header nav ul a:hover{
     .fa-moon{
         position: absolute;
         right: 10px;
+        top: -8px;
     }
     .fa-sun{
         position: absolute;
         right: 10px;
+        top: -8px;
     }
     .fa-bars{
         position: relative;
@@ -179,7 +181,7 @@ header nav ul a:hover{
 #p1{
     width: 19ch;
     animation: typing 3s steps(19), blink .5s step-end infinite alternate;
-    animation-delay: 1s;
+    /* animation-delay: 1s; */
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -200,7 +202,7 @@ header nav ul a:hover{
   #p2{
     width: 8.3ch;
     animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
-    animation-delay: 5s;
+    animation-delay: 4s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;

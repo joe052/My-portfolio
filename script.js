@@ -57,11 +57,11 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
         }
         darkMode()
     }
-})
+});
 window.addEventListener('load', function(){
     var delay1 = 1000; //1 second
-    var delay2 = 5000;
-    var delay3 = 7500;
+    var delay2 = 4000;
+    var delay3 = 6000;
      setTimeout(function() {
          p1.textContent = "I am Tinega Collins"
 }, delay1);
