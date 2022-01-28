@@ -181,7 +181,7 @@ header nav ul a:hover{
 #p1{
     width: 19ch;
     animation: typing 3s steps(19), blink .5s step-end infinite alternate;
-    /* animation-delay: 1s; */
+    animation-delay: 1s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -202,7 +202,7 @@ header nav ul a:hover{
   #p2{
     width: 8.3ch;
     animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
-    animation-delay: 3.5s;
+    animation-delay: 5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -212,7 +212,7 @@ header nav ul a:hover{
   #p3{
     width: 11.3ch;
     animation: typing 1.5s steps(20), blink .5s step-end infinite alternate;
-    animation-delay: 5.7s;
+    animation-delay: 8s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -240,12 +240,12 @@ header nav ul a:hover{
   .content2{
       position: relative;
       right: 1200px;
-      transition: all .5s ease;
+      transition: all .7s ease-in;
   }
   .content3{
       position: relative;
       left: 1000px;
-      transition: all .5s ease;
+      transition: all .7s ease-in-out;
   }
   #aboutMe h2{
       align-self: flex-start;
@@ -644,5 +644,9 @@ button{
   }
   #downbar ul a:active{
       background: black;
+      color: black;
+  }
+  .dark10000{
+      background: white;
       color: black;
   }

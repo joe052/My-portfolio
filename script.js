@@ -59,9 +59,9 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
     }
 });
 window.addEventListener('load', function(){
-    var delay1 = 1000; //1 second
-    var delay2 = 4000;
-    var delay3 = 5700;
+    var delay1 = 1100; //1 second
+    var delay2 = 5000;
+    var delay3 = 8000;
      setTimeout(function() {
          p1.textContent = "I am Tinega Collins"
 }, delay1);
@@ -89,4 +89,10 @@ window.addEventListener("scroll",()=>{
         img.style.left = "1000px"
     }
 
+})
+const moonIcon = document.querySelector("#moon2")
+moonIcon.addEventListener("click",()=>{
+    const body = document.querySelector("body")
+    body.style.background = "unset"
+    body.classList.toggle("dark10000")
 })
