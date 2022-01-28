@@ -88,3 +88,20 @@ window.onscroll = function(e) {
     }
     this.oldScroll = this.scrollY;
   }
+  ///new
+  window.addEventListener("scroll",()=>{
+    let content = document.querySelector(".skillsTab");
+    let contentposition = content.getBoundingClientRect().top;
+    let screenposition = window.innerHeight;
+    let mask = document.querySelectorAll(".mask")
+    if(contentposition < screenposition){
+            mask.forEach(run(mask))
+            function run (x){
+                v.classList.toggle("mask2")
+            }
+    }else{
+        // content.style.right = "1200px"
+        // img.style.left = "1000px"
+    }
+
+})
