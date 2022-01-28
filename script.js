@@ -61,7 +61,7 @@ document.querySelector("#checkbtn").addEventListener("click",function(){
 window.addEventListener('load', function(){
     var delay1 = 1000; //1 second
     var delay2 = 4000;
-    var delay3 = 6000;
+    var delay3 = 5700;
      setTimeout(function() {
          p1.textContent = "I am Tinega Collins"
 }, delay1);
@@ -70,18 +70,23 @@ setTimeout(function() {
     p2.textContent = "And this"
 }, delay2);
 const p3 =document.querySelector("#p3")
+const span = document.querySelector("#p3 span");
+console.log(span)
 setTimeout(function() {
-    p3.animate([
-        {transform: 'scale(0)'},
-        {transform: 'scale(.5)'},
-        {transform : 'scale(1)'}
-    ],{
-        duration: 300,
-        easing: 'ease-in',
-        iterations: 1,
-        delay: 0 ,
-        direction: "normal",
-        fill: "forwards"
-    })
-}, delay3);
+    p3.textContent = "is My World"
+},delay3);
 });
+window.addEventListener("scroll",()=>{
+    let content = document.querySelector(".content2");
+    let contentposition = content.getBoundingClientRect().top;
+    let screenposition = window.innerHeight;
+    let img = document.querySelector(".content3");
+    if(contentposition < screenposition){
+       content.style.right = "0px"
+       img.style.left = "0px";
+    }else{
+        content.style.right = "1200px"
+        img.style.left = "1000px"
+    }
+
+})

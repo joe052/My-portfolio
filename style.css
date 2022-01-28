@@ -186,7 +186,7 @@ header nav ul a:hover{
     overflow: hidden;
     border-right: 2px solid;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 18px;
 }
 @keyframes typing {
     from {
@@ -202,7 +202,7 @@ header nav ul a:hover{
   #p2{
     width: 8.3ch;
     animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
-    animation-delay: 4s;
+    animation-delay: 3.5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
@@ -210,17 +210,20 @@ header nav ul a:hover{
     font-family: monospace;
   }
   #p3{
-      transform: scale(0);
-  }
-  #p3 span{
-      font-size: 2rem;
-      margin-left: 8px;
+    width: 11.3ch;
+    animation: typing 1.5s steps(20), blink .5s step-end infinite alternate;
+    animation-delay: 5.7s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-size: 1.3rem;
+    font-family: monospace;
   }
   @media only screen and (min-width: 890px) {
       h1, p{
           text-align: center;
       }
-      #p1,#p2{
+      #p1,#p2,#p3{
           align-self: center;
       }
   }
@@ -233,6 +236,16 @@ header nav ul a:hover{
       gap: 30px;
       row-gap: 0px;
       width: 100vw;
+  }
+  .content2{
+      position: relative;
+      right: 1200px;
+      transition: all .5s ease;
+  }
+  .content3{
+      position: relative;
+      left: 1000px;
+      transition: all .5s ease;
   }
   #aboutMe h2{
       align-self: flex-start;
