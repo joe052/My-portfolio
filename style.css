@@ -101,6 +101,7 @@ header nav ul a:hover{
     .fa-bars{
         visibility: visible;
         font-size: 20px;
+        
     }
     .new{
       position: absolute;
@@ -116,7 +117,7 @@ header nav ul a:hover{
     }
     .fa-bars{
         position: relative;
-        left:15px;
+        left:25px;
     }
     .fa-times-circle{
         visibility: visible;
