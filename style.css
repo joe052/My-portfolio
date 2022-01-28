@@ -616,7 +616,7 @@ button{
       width: 100vw;
       padding: 7px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       position: fixed;
       bottom: 0px;
       border: 1px solid black;
