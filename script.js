@@ -19,45 +19,30 @@ ul.addEventListener("click",function(e){
     }
 })
 //dark mode
-//new check button
-
-
-document.querySelector("#checkbtn").addEventListener("click",function(){
-    const check = document.querySelector("#checkbtn").checked;
-    const moon = document.querySelector("#moon");
-    if (check === true){
-        function darkMode(){
-            const body = document.querySelector("body")
-            body.style.background = "white"
-            body.style.color = "#141212"
-            const nav = document.querySelectorAll(".dark")
-         nav.forEach(item =>{
-             item.style.color = "white"
-         })
-         moon.classList.remove("far");
-         moon.classList.remove("fa-sun");
-         moon.classList.add("fas");
-         moon.classList.add("fa-moon");
-        }
-        darkMode()
+const mrMoon = document.querySelector("#moon");
+mrMoon.addEventListener("click",()=>{
+    const body = document.querySelector("body")
+    body.classList.toggle("dark10000");
+})
+const nav1 = document.querySelector("#navigation")
+nav1.addEventListener("click",function(e){
+    if(e.target.className == "far fa-sun fa-2x"){
+        moon.classList.remove("far");
+        moon.classList.remove("fa-sun");
+        moon.classList.remove("fa-2x");
+        moon.classList.add("fas");
+        moon.classList.add("fa-moon");
+        moon.classList.add("fa-2x");
+    }else if(e.target.className == "fas fa-moon fa-2x"){
+        moon.classList.remove("fas");
+        moon.classList.remove("fa-moon");
+        moon.classList.remove("fa-2x");
+        moon.classList.add("far");
+        moon.classList.add("fa-sun");
+        moon.classList.add("fa-2x");
     }
-    else{
-        function darkMode(){
-            const body = document.querySelector("body")
-            body.style.background = "#141212"
-            body.style.color = "white"
-            const nav = document.querySelectorAll(".dark")
-         nav.forEach(item =>{
-             item.style.color = "white"
-         })
-         moon.classList.remove("fas");
-         moon.classList.remove("fa-moon");
-         moon.classList.add("far");
-         moon.classList.add("fa-sun");
-        }
-        darkMode()
-    }
-});
+})
+
 window.addEventListener('load', function(){
     var delay1 = 1100; //1 second
     var delay2 = 5000;
@@ -70,8 +55,6 @@ setTimeout(function() {
     p2.textContent = "And this"
 }, delay2);
 const p3 =document.querySelector("#p3")
-const span = document.querySelector("#p3 span");
-console.log(span)
 setTimeout(function() {
     p3.textContent = "is My World"
 },delay3);
@@ -93,6 +76,15 @@ window.addEventListener("scroll",()=>{
 const moonIcon = document.querySelector("#moon2")
 moonIcon.addEventListener("click",()=>{
     const body = document.querySelector("body")
-    body.style.background = "unset"
     body.classList.toggle("dark10000")
 })
+const downBar = document.querySelector("#downbar");
+window.onscroll = function(e) {
+    if(this.oldScroll > this.scrollY){
+       downBar.style.opacity = "1"
+    }
+    else{
+        downBar.style.opacity = "0"
+    }
+    this.oldScroll = this.scrollY;
+  }

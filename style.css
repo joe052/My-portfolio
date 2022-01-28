@@ -15,6 +15,7 @@ body{
 #home{
     position: absolute;
     top: 0;
+    overflow-x: hidden !important;
 }
 header{
     margin-top: 6vh;
@@ -45,10 +46,10 @@ header nav ul a{
     transition: all .1s ease;
 }
 header nav ul a{
-    color: white;
+    color:  #C7493A;
 }
 header nav ul a:visited{
-    color : white;
+    color:  #C7493A;
 }
 header nav ul a:hover{
     color: rgba(118, 194, 197, 0.815);
@@ -61,12 +62,10 @@ header nav ul a:hover{
     transform: scale(0);
     position: relative;
 }
-.new{
-    position: relative;
-    left: 100px;
-}
 #moon{
     font-size: 25px;
+    position: relative;
+    left: 50px;
 }
 .fa-bars{
     position: relative;
@@ -107,15 +106,13 @@ header nav ul a:hover{
       position: absolute;
       right: 0;
     }
-    .fa-moon{
-        position: absolute;
-        right: 10px;
-        top: -8px;
+    nav{
+        position: relative;
+        width: 100%;
     }
-    .fa-sun{
+    #moon{
         position: absolute;
-        right: 10px;
-        top: -8px;
+        left: 85vw;
     }
     .fa-bars{
         position: relative;
@@ -128,10 +125,6 @@ header nav ul a:hover{
         top: 20px;
         margin-bottom: 60px;
         font-size: 20px;
-    }
-    label{
-        position: relative;
-        right: 50px;
     }
     #ul1{
         height: 80vh;
@@ -148,7 +141,12 @@ header nav ul a:hover{
     .home2{
         border-top: .5px solid black;
     }
-    
+    header nav ul a{
+        color:  black;
+    }
+    header nav ul a:visited{
+        color:  black;
+    }
 }
 @media only screen and (max-width: 400px){
     #ul1{
@@ -236,16 +234,20 @@ header nav ul a:hover{
       gap: 30px;
       row-gap: 0px;
       width: 100vw;
+      overflow-x: hidden !important;
   }
   .content2{
       position: relative;
       right: 1200px;
       transition: all .7s ease-in;
+      overflow-x: hidden !important;
+      -webkit-overflow-scrolling: hidden;
   }
   .content3{
       position: relative;
       left: 1000px;
       transition: all .7s ease-in-out;
+      overflow-x: hidden !important;
   }
   #aboutMe h2{
       align-self: flex-start;
@@ -260,7 +262,7 @@ header nav ul a:hover{
   #aboutMe img{
       width: 270px;
       height: 270px;
-      overflow: hidden;
+      overflow: hidden !important;
   }
   #aboutMe article p{
       font-size: 20px;
@@ -276,10 +278,12 @@ header nav ul a:hover{
   #skills{
       min-height: 100vh; 
       position: relative;
+      overflow-x: hidden;
   }
   .skillsTitle{
       text-align: center;
       text-decoration: underline;
+      overflow-x: hidden;
   }
   #skills .skillsTab{
       margin-top: 20px;
@@ -623,6 +627,8 @@ button{
   #downbar{
       overflow-x: unset !important;
       z-index: 1000;
+      opacity: 0;
+      transition: all .2s ease-out;
   }
   #downbar ul{
       height: min-content;
@@ -648,5 +654,5 @@ button{
   }
   .dark10000{
       background: white;
-      color: black;
+      color: #141212;
   }
