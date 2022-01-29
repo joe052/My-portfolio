@@ -88,12 +88,6 @@ window.onscroll = function(e) {
     }
     this.oldScroll = this.scrollY;
   }
-  ///new
-//   let content = document.querySelector("#navigation");
-//   let contentposition = content.getBoundingClientRect().top;
-//   console.log(contentposition)
-//   let screenposition = window.innerHeight;
-//   console.log(screenposition)
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".skills11")
     let contentposition = content.getBoundingClientRect().top;
@@ -173,5 +167,26 @@ window.addEventListener("scroll",()=>{
             mask.classList.remove("mask2");
             immag.style.opacity = "1"
         }
+    }
+});
+//projects
+const project1 = document.querySelector(".project1")
+const project2 = document.querySelector(".project2")
+const projectt = document.querySelector("#projects2")
+const project3 = document.querySelector(".project3")
+const project4 = document.querySelector(".project4")
+console.log(projectt)
+projectt.addEventListener("mouseover",function(e){
+    if(e.target.className == "realProjects project1"){
+        project2.classList.add("project2Hover")
+        project3.classList.add("project3Hover")
+        project4.classList.add("project4Hover")
+    }
+})
+projectt.addEventListener("mouseout",function(e){
+    if(e.target.className == "realProjects project1"){
+        project2.classList.remove("project2Hover")
+        project3.classList.remove("project3Hover")
+        project4.classList.remove("project4Hover")
     }
 })

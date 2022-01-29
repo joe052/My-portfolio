@@ -219,11 +219,12 @@ header nav ul a:hover{
     font-family: monospace;
   }
   @media only screen and (min-width: 890px) {
-      h1, p{
+      h1{
           text-align: center;
       }
       #p1,#p2,#p3{
           align-self: center;
+          text-align: center;
       }
   }
   #aboutMe{
@@ -457,11 +458,105 @@ header nav ul a:hover{
   /* projects */
 #projects{
       min-height: 100vh;
+      position: relative;
 }
 #projects h2{
     text-align: center;
     text-decoration: underline;
     margin-top: 30px;
+}
+#projects2{
+   min-height: 90vh;
+   display: flex;
+   align-items: center;
+   flex-wrap: nowrap;
+   overflow-x: scroll;
+   width: 95vw;
+   position: absolute;
+   right: 0%;
+}
+.realProjects{
+    padding-left: 15px;
+    border-radius: 20px;
+    height: 350px;
+    width: 250px;
+    background: rgb(51, 192, 211);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.363) ;
+    transition: transform .2s ease-in-out;
+}
+.realProjects:hover{
+    z-index: 1;
+    transform: rotate(3deg);
+}
+.complete{
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-top: 10px;
+}
+.projectTitle{
+    margin-top: 30px;
+}
+.languages{
+    margin-top: 60px;
+}
+.sourceCode{
+    margin-top: 10px;
+}
+.contributions{
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+.project1{
+    position: absolute;
+    left: 50px;
+}
+.project1:hover{
+    margin-right: 50px;
+}
+.project2{
+    position: absolute;
+    left: 250px;
+    background: violet;
+    transition: all .3s ease-in-out;
+}
+.project2Hover{
+    left: 320px;
+}
+.project3{
+    position: absolute;
+    left: 450px;
+    background: yellow;
+    transition: all .3s ease-in-out;
+}
+.project3Hover{
+    left: 520px;
+}
+.project4{
+    position: absolute;
+    left: 650px;
+    background: springgreen;
+    transition: all .3s ease-in-out;
+}
+.project4Hover{
+    left: 720px;
+}
+.project5{
+    position: absolute;
+    left: 850px;
+    background: sandybrown;
+}
+.project6{
+    position: absolute;
+    left: 1050px;
+    background: palevioletred;
+}
+.project7{
+    position: absolute;
+    left: 1250px;
+    background: purple;
 }
   /* contact */
   #contact{
