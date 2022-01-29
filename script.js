@@ -99,15 +99,38 @@ window.addEventListener("scroll",()=>{
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     const mask = document.querySelector(".masksup")
-    var d2 = 1000;
-    var d3 = 3000;
+    var d2 = 2000;
+    const imgJpeg = document.querySelector(".jpegg")
     setTimeout(function() {
         if(contentposition<screenposition){
             mask.classList.add("mask2")
-            mask.classList.remove("mask5")
+            imgJpeg.style.opacity = "0"
         }else{
-            mask.classList.add("mask5")
             mask.classList.remove("mask2")
+            imgJpeg.style.opacity = "1"
         }
     }, d2);
 });
+window.addEventListener("scroll",()=>{
+    let content = document.querySelector(".skills2")
+    let contentposition = content.getBoundingClientRect().top;
+    let screenposition = window.innerHeight;
+    const mask= document.querySelector(".mask101")
+    const width = window.innerWidth;
+    if (width<530){
+        var delay = 500;
+    }else{
+        var delay = 5000;
+    };
+    newFunction(contentposition, screenposition, mask, delay);
+    function newFunction(contentposition, screenposition, mask, delay) {
+        if (contentposition < screenposition) {
+            setTimeout(() => {
+                mask.classList.add("mask2");
+            }, delay);
+        }
+        else {
+            mask.classList.remove("mask2");
+        }
+    }
+})

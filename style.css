@@ -311,8 +311,16 @@ header nav ul a:hover{
       top: 0;
       width: 100%;
       height: 100%;
-      background: red;
+      background: #010101;
       transition: all 1s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  #mask101{
+      background-position: left;
+      justify-self: flex-start;
+      align-self: flex-start;
   }
   .mask2{
       height: 0%;
@@ -682,4 +690,10 @@ button{
   .dark10000{
       background: white;
       color: #141212;
+  }
+  .jpegg{
+      height: 430px;
+      width: 400px;
+      transition: all .5s ease;
+      overflow-x: hidden;
   }
