@@ -43,7 +43,7 @@ nav1.addEventListener("click",function(e){
     }
 })
 
-window.addEventListener('load', function(){
+// window.addEventListener('load', function(){
     var delay1 = 1100; //1 second
     var delay2 = 5000;
     var delay3 = 8000;
@@ -58,7 +58,7 @@ const p3 =document.querySelector("#p3")
 setTimeout(function() {
     p3.textContent = "is My World"
 },delay3);
-});
+// });
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".content2");
     let contentposition = content.getBoundingClientRect().top;
@@ -89,19 +89,25 @@ window.onscroll = function(e) {
     this.oldScroll = this.scrollY;
   }
   ///new
-  window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".skillsTab");
+  let content = document.querySelector("#navigation");
+  let contentposition = content.getBoundingClientRect().top;
+  console.log(contentposition)
+  let screenposition = window.innerHeight;
+  console.log(screenposition)
+window.addEventListener("scroll",()=>{
+    let content = document.querySelector(".skills11")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
-    let mask = document.querySelectorAll(".mask")
-    if(contentposition < screenposition){
-            mask.forEach(run(mask))
-            function run (x){
-                v.classList.toggle("mask2")
-            }
-    }else{
-        // content.style.right = "1200px"
-        // img.style.left = "1000px"
-    }
-
-})
+    const mask = document.querySelector(".masksup")
+    var d2 = 1000;
+    var d3 = 3000;
+    setTimeout(function() {
+        if(contentposition<screenposition){
+            mask.classList.add("mask2")
+            mask.classList.remove("mask5")
+        }else{
+            mask.classList.add("mask5")
+            mask.classList.remove("mask2")
+        }
+    }, d2);
+});
