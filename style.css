@@ -294,6 +294,7 @@ header nav ul a:hover{
       justify-content: center;
       justify-content: space-around;
       gap: 30px;
+      row-gap: 120px;
   }
   .skillsTab article{
       width: max-content;
@@ -317,10 +318,11 @@ header nav ul a:hover{
       justify-content: center;
       align-items: center;
   }
-  #mask101{
-      background-position: left;
-      justify-self: flex-start;
-      align-self: flex-start;
+  #mask101 img{
+      height: 250px;
+      width: 300px;
+      overflow-x: hidden;
+      transition: all 1s ease;
   }
   .mask2{
       height: 0%;

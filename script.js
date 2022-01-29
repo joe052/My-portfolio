@@ -89,48 +89,62 @@ window.onscroll = function(e) {
     this.oldScroll = this.scrollY;
   }
   ///new
-  let content = document.querySelector("#navigation");
-  let contentposition = content.getBoundingClientRect().top;
-  console.log(contentposition)
-  let screenposition = window.innerHeight;
-  console.log(screenposition)
+//   let content = document.querySelector("#navigation");
+//   let contentposition = content.getBoundingClientRect().top;
+//   console.log(contentposition)
+//   let screenposition = window.innerHeight;
+//   console.log(screenposition)
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".skills11")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     const mask = document.querySelector(".masksup")
-    var d2 = 2000;
-    const imgJpeg = document.querySelector(".jpegg")
-    setTimeout(function() {
-        if(contentposition<screenposition){
-            mask.classList.add("mask2")
-            imgJpeg.style.opacity = "0"
-        }else{
-            mask.classList.remove("mask2")
-            imgJpeg.style.opacity = "1"
+    const width = window.innerWidth
+    if (width<530){
+        var delay = 1700;
+    }else{
+        var delay = 2000;
+    };
+    
+    newFunction(contentposition, screenposition, mask, delay);
+    function newFunction(contentposition, screenposition, mask, delay,imgJpeg) {
+        var imgJpeg = document.querySelector(".jpegg")
+        if (contentposition < screenposition) {
+            setTimeout(() => {
+                mask.classList.add("mask2");
+                imgJpeg.style.opacity = "0"
+            }, delay);
         }
-    }, d2);
+        else {
+            mask.classList.remove("mask2");
+            imgJpeg.style.opacity= "1";
+        }
+    }
 });
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".skills2")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
-    const mask= document.querySelector(".mask101")
+    const mask= document.querySelector(".mask101");
+    const immag = document.querySelector("#mask101 img")
     const width = window.innerWidth;
     if (width<530){
-        var delay = 500;
+        var delay = 1500;
+        
     }else{
-        var delay = 5000;
+        var delay = 4000;
     };
     newFunction(contentposition, screenposition, mask, delay);
     function newFunction(contentposition, screenposition, mask, delay) {
         if (contentposition < screenposition) {
             setTimeout(() => {
                 mask.classList.add("mask2");
+                immag.style.opacity = "0"
             }, delay);
         }
         else {
             mask.classList.remove("mask2");
+            immag.style.opacity = "1"
         }
     }
 })
