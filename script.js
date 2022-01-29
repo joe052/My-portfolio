@@ -148,3 +148,30 @@ window.addEventListener("scroll",()=>{
         }
     }
 })
+window.addEventListener("scroll",()=>{
+    let content = document.querySelector(".skills3")
+    let contentposition = content.getBoundingClientRect().top;
+    let screenposition = window.innerHeight;
+    const mask= document.querySelector(".mask102");
+    const immag = document.querySelector(".mask102 img")
+    const width = window.innerWidth;
+    if (width<530){
+        var delay = 1500;
+        
+    }else{
+        var delay = 6000;
+    };
+    newFunction(contentposition, screenposition, mask, delay);
+    function newFunction(contentposition, screenposition, mask, delay) {
+        if (contentposition < screenposition) {
+            setTimeout(() => {
+                mask.classList.add("mask2");
+                immag.style.opacity = "0"
+            }, delay);
+        }
+        else {
+            mask.classList.remove("mask2");
+            immag.style.opacity = "1"
+        }
+    }
+})

@@ -294,7 +294,7 @@ header nav ul a:hover{
       justify-content: center;
       justify-content: space-around;
       gap: 30px;
-      row-gap: 120px;
+      row-gap: 150px;
   }
   .skillsTab article{
       width: max-content;
@@ -318,17 +318,28 @@ header nav ul a:hover{
       justify-content: center;
       align-items: center;
   }
+  .mask101{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
   #mask101 img{
       height: 250px;
       width: 300px;
       overflow-x: hidden;
-      transition: all 1s ease;
+      transition: all .6s ease;
   }
   .mask2{
       height: 0%;
   }
   .mask5{
       height: 100%;
+  }
+  .mask102 img{
+    height: 350px;
+    width: 500px;
+    overflow: hidden;
+    transition: all .6s ease;
   }
   .skills{
       min-width: 250px;
