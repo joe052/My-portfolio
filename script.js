@@ -87,7 +87,7 @@ window.onscroll = function(e) {
     this.oldScroll = this.scrollY;
   }
 window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".css")
+    let content = document.querySelector(".html")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     let javascript = document.querySelector(".javascript")
