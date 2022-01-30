@@ -87,7 +87,7 @@ window.onscroll = function(e) {
     this.oldScroll = this.scrollY;
   }
 window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".skills11")
+    let content = document.querySelector(".css")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     let javascript = document.querySelector(".javascript")
@@ -98,7 +98,7 @@ window.addEventListener("scroll",()=>{
     const mask = document.querySelector(".masksup")
     const width = window.innerWidth
     if (width<530){
-        var delay = 1000;
+        var delay = 0;
 
     }else{
         var delay = 2000;
@@ -140,7 +140,7 @@ window.addEventListener("scroll",()=>{
     }
 });
 window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".skills2")
+    let content = document.querySelector(".brain")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     const mask= document.querySelector(".mask101");
@@ -150,7 +150,7 @@ window.addEventListener("scroll",()=>{
     let brain = document.querySelector(".brain")
     const width = window.innerWidth;
     if (width<530){
-        var delay = 1000;
+        var delay = 0;
         
     }else{
         var delay = 4000;
@@ -182,7 +182,7 @@ window.addEventListener("scroll",()=>{
     }
 })
 window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".skills3")
+    let content = document.querySelector(".patience")
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     const mask= document.querySelector(".mask102");
@@ -193,7 +193,7 @@ window.addEventListener("scroll",()=>{
     let patience = document.querySelector(".patience");
     const width = window.innerWidth;
     if (width<530){
-        var delay = 1000;
+        var delay = 0;
     }else{
         var delay = 6000;
     };
