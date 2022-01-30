@@ -58,15 +58,16 @@ setTimeout(function() {
     p3.textContent = "is My World"
 },delay3);
 window.addEventListener("scroll",()=>{
-    let content = document.querySelector(".content2");
+    let content = document.querySelector(".content3");
     let contentposition = content.getBoundingClientRect().top;
     let screenposition = window.innerHeight;
     let img = document.querySelector(".content3");
+    let article = document.querySelector(".content2")
     if(contentposition < screenposition){
-       content.style.right = "0px"
+       article.style.right = "0px"
        img.style.left = "0px";
     }else{
-        content.style.right = "1200px"
+        article.style.right = "1200px"
         img.style.left = "1000px"
     }
 

@@ -10,16 +10,20 @@ html{
 body{
     background:  #141212;
     color: white;
-    /* border-right: 1px solid green; */
+    font-family: 'Times New Roman', Times, serif;
 }
 #home{
     position: absolute;
     top: 0;
     overflow-x: hidden !important;
 }
+h2{
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
 header{
     margin-top: 6vh;
-    font-size: 13px !important;
+    font-size: 15px;
+    font-family: 'Gentium Book Basic', serif;
 }
 header nav{
     display: flex;
@@ -86,6 +90,7 @@ header nav ul a:hover{
         max-width: 100vw;
         transition: all .5s ease-in-out;
         z-index: 1;
+        font-size: 12px;
     }
     header nav ul li{
         margin-bottom: 20px;
@@ -176,6 +181,7 @@ header nav ul a:hover{
     position: relative;
     width: 100%;
     overflow-x: hidden;
+    font-family: 'Pridi', serif;
 }
 #p1{
     width: 19ch;
@@ -258,6 +264,7 @@ header nav ul a:hover{
   }
   #aboutMe article{
       align-self: center;
+      font-family: 'Nanum Brush Script', cursive;
   }
   #aboutMe img{
       width: 270px;
@@ -265,7 +272,7 @@ header nav ul a:hover{
       overflow: hidden !important;
   }
   #aboutMe article p{
-      font-size: 20px;
+      font-size: 23px;
       text-align: right;
   }
   @media only screen and (min-width: 900px){
@@ -273,6 +280,10 @@ header nav ul a:hover{
         min-width: 400px;
         height: 400px;
         overflow: hidden;
+    }
+    #aboutMe article p{
+        font-size: 30px;
+        text-align: right;
     }
   }
   #skills{
@@ -294,6 +305,7 @@ header nav ul a:hover{
       justify-content: space-around;
       gap: 30px;
       row-gap: 150px;
+      font-family: 'Jura', sans-serif;
   }
   .skillsTab article{
       width: max-content;
