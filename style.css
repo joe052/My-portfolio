@@ -650,9 +650,14 @@ header nav ul a:hover{
     height: max-content;
     overflow-x: hidden;
 }
+#contact article{
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
 @media only screen and (max-width:975px) {
     #contact{
-        height: 90vh;
+        height: calc(max-content + 50px);
     }
 }
 
@@ -661,30 +666,84 @@ header nav ul a:hover{
     text-decoration: underline;
 }
 #contact h3{
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    text-align: center;
 }
 .mail{
     display: flex;
     flex-direction: column;
 }
-#email{
-    height: 30px;
-    width: 20%;
-    background: #141212;
-    appearance: none;
-    outline: none;
-    border: none;
-    color: white;
-    margin-top: 20px;
-    border-bottom: greenyellow;
-    border-right: red;
+.meso{
+   border: 2px solid white; 
+   appearance: none;
+   background: #f2f2f2;
+   padding : 10px;
+   padding-top: 20px;
+   border-radius: 3px;
+   width: 250px;
+   outline: none;
+   font-size: 14px;
+}
+.meso::placeholder{
+    color: black;
+    transition: color 0.8s ease;
+}
+.meso:focus::placeholder{
+    color: transparent;
+}
+.email-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+.email-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+                top 0.3s ease,
+                font-size 0.3s ease,
+                color 0.3s ease;
+}
+.email-field input:valid + .placeholder,
+.email-field input:focus + .placeholder{
+    top: 10px;
+    font-size: 10px;
+    color:  #C7493A;
+}
+.email-field input{
+    border: none; 
+   appearance: none;
+   background: #f2f2f2;
+   padding : 12px;
+   border-radius: 3px;
+   width: 250px;
+   outline: none;
+   font-size: 14px;
+}
+.email-field .one input{
+    background: none;
+    border: 2px solid #ddd;
+}
+.email-field .one input:valid,
+.email-field .one input:focus{
+    border-color: #222;
+    transition-delay: 0.1s;
+}
+.email-field .one input:valid + .placeholder,
+.email-field .one input:focus + .placeholder{
+    top: 20px;
+    background: #fff;
 }
 button {
     font-family: inherit;
     font-size: 15px;
-    background: rgb(43, 187, 231);
+    background: #2E1115;
     color: white;
-    padding: 0.7em 1em;
+    padding: 0.5em 0.8em;
     padding-left: 0.9em;
     display: flex;
     align-items: center;
@@ -741,10 +800,12 @@ button{
 }
 .iconss{
   margin: 10px;
+  font-size: 20px;
 }
 #tm{
   text-align: center;
-  margin-top: 20px;
+  position: relative;
+  top : 10px;
 }
 .svg-icon {
     width: 17px;
@@ -838,4 +899,25 @@ button{
         scrollbar-color: #C7493A #689775;
         scrollbar-width: thin;
     }
+}
+#facebook{
+    color: #4267B2;
+}
+#twitter{
+    color: #00A1E5;
+}
+#whatsapp{
+    color: #4EC55B;
+}
+#spotify{
+    color: #1DD05D;
+}
+#linkedin{
+    color: #0270AD;
+}
+.iconss{
+    transition: font-size .5s ease;
+}
+.iconss:hover{
+    font-size: 30px;
 }
