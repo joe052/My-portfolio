@@ -61,13 +61,15 @@ setTimeout(function() {
     p3.textContent = "is My World"
 },delay3);
 p3.classList.add("p3onload")
-})
 //scroll
 const scrollBar = document.querySelector(".scroll");
 const tap = document.querySelector(".taptap");
 setTimeout(()=>{
     scrollBar.style.opacity = "1";
 },10000)
+})
+//scroll
+
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".content3");
     let contentposition = content.getBoundingClientRect().top;
