@@ -77,6 +77,7 @@ window.addEventListener("scroll",()=>{
     let screenposition = window.innerHeight;
     let img = document.querySelector(".content3");
     let article = document.querySelector(".content2")
+    const scrollBar = document.querySelector(".scroll")
     if(contentposition < screenposition){
        article.style.right = "0px"
        img.style.left = "0px";

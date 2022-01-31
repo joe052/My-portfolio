@@ -157,7 +157,7 @@ header nav ul a:hover{
         margin-left: 30px;
     }
     .scroll{
-        bottom: 60px;
+        bottom: 70px;
     }
 }
 @media only screen and (max-width: 400px){
@@ -801,3 +801,41 @@ button{
       transition: all .5s ease;
       overflow-x: hidden;
   }
+::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #7395AE;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: #141212;
+    border-radius: 20px;
+    border: .15em solid #7395AE;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #557A95;
+}
+.vertical-scroll::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+.vertical-scroll::-webkit-scrollbar-track{
+    background: #C7493A;
+    border-radius: 20px;
+}
+.vertical-scroll::-webkit-scrollbar-thumb{
+    background: #689775;
+    border-radius: 20px;
+    border: .15em solid #7395AE;
+}
+.vertical-scroll::-webkit-scrollbar-thumb:hover{
+    background: #557A95;
+}
+@supports (scrollbar-color: red blue ){
+    *{
+        scrollbar-color: #C7493A #689775;
+        scrollbar-width: thin;
+    }
+}
