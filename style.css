@@ -156,6 +156,9 @@ header nav ul a:hover{
     .landing p,h1{
         margin-left: 30px;
     }
+    .scroll{
+        bottom: 60px;
+    }
 }
 @media only screen and (max-width: 400px){
     #ul1{

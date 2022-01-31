@@ -43,9 +43,10 @@ nav1.addEventListener("click",function(e){
     }
 })
 //anime
+let land = document.querySelector(".landing");
 window.addEventListener("load",()=>{
     var delay1 = 1200; //1 second
-    var delay2 = 5000;
+    var delay2 = 5100;
     var delay3 = 8100;
      setTimeout(function() {
          p1.textContent = "I am Tinega Collins"        
@@ -66,7 +67,7 @@ const scrollBar = document.querySelector(".scroll");
 const tap = document.querySelector(".taptap");
 setTimeout(()=>{
     scrollBar.style.opacity = "1";
-},10000)
+},11000)
 })
 //scroll
 
