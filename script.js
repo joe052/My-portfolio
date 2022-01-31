@@ -43,20 +43,31 @@ nav1.addEventListener("click",function(e){
     }
 })
 //anime
-    var delay1 = 1100; //1 second
+window.addEventListener("load",()=>{
+    var delay1 = 1200; //1 second
     var delay2 = 5000;
-    var delay3 = 8000;
+    var delay3 = 8100;
      setTimeout(function() {
-         p1.textContent = "I am Tinega Collins"
+         p1.textContent = "I am Tinega Collins"        
 }, delay1);
+p1.classList.add("p1onload")
 const p2 = document.querySelector("#p2")
 setTimeout(function() {
     p2.textContent = "And this"
 }, delay2);
+p2.classList.add("p2onload")
 const p3 =document.querySelector("#p3")
 setTimeout(function() {
     p3.textContent = "is My World"
 },delay3);
+p3.classList.add("p3onload")
+})
+//scroll
+const scrollBar = document.querySelector(".scroll");
+const tap = document.querySelector(".taptap");
+setTimeout(()=>{
+    scrollBar.style.opacity = "1";
+},10000)
 window.addEventListener("scroll",()=>{
     let content = document.querySelector(".content3");
     let contentposition = content.getBoundingClientRect().top;
@@ -66,9 +77,11 @@ window.addEventListener("scroll",()=>{
     if(contentposition < screenposition){
        article.style.right = "0px"
        img.style.left = "0px";
+       scrollBar.style.opacity = "0";
     }else{
         article.style.right = "1200px"
         img.style.left = "1000px"
+        
     }
 
 })
@@ -327,3 +340,4 @@ projectt.addEventListener("mouseout",function(e){
         project7.classList.remove("project7Hover")
     }
 })
+

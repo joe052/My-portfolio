@@ -153,6 +153,9 @@ header nav ul a:hover{
     header nav ul a:visited{
         color:  black;
     }
+    .landing p,h1{
+        margin-left: 30px;
+    }
 }
 @media only screen and (max-width: 400px){
     #ul1{
@@ -167,10 +170,7 @@ header nav ul a:hover{
     position: relative;
     overflow-x: hidden !important;
 }
-.landing p,h1{
-    margin: 10px;
-    margin-left: 30px;
-}
+
 .landing h1{
     font-size: 70px;
     background-image: #C7493A;
@@ -185,13 +185,15 @@ header nav ul a:hover{
 }
 #p1{
     width: 19ch;
-    animation: typing 3s steps(19), blink .5s step-end infinite alternate;
-    animation-delay: 1s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
     font-family: monospace;
     font-size: 18px;
+}
+.p1onload{
+    animation: typing 3s steps(19), blink .5s step-end infinite alternate;
+    animation-delay: 1s;
 }
 @keyframes typing {
     from {
@@ -206,23 +208,62 @@ header nav ul a:hover{
   }
   #p2{
     width: 8.3ch;
-    animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
-    animation-delay: 5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
     font-size: 1.3rem;
     font-family: monospace;
   }
+  .p2onload {
+    animation: typing 1.5s steps(14), blink .5s step-end infinite alternate;
+    animation-delay: 5s;
+  }
   #p3{
     width: 11.3ch;
-    animation: typing 1.5s steps(20), blink .5s step-end infinite alternate;
-    animation-delay: 8s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
     font-size: 1.3rem;
     font-family: monospace;
+  }
+  .p3onload{
+    animation: typing 1.5s steps(20), blink .5s step-end infinite alternate;
+    animation-delay: 8s;
+  }
+  .landing p,h1{
+    margin-top: 10px;
+}
+  .scroll{
+      height: 60px;
+      width: 30px;
+      border: 1px solid #F8483B;
+      border-radius: 30px;
+      align-self: center;
+      position: absolute;
+      bottom: 40px;
+      display : flex;
+      padding: 9px;
+      opacity: 0;
+      transform: opacity .4s ease-in-out;
+  }
+  .taptap{
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #F8483B;
+      position: relative;
+      animation: tap 4s  infinite ease-in-out;
+    }
+  @keyframes tap {
+      0% {
+          top: 0px;
+      }
+      50% {
+          top: 30px;
+      }
+      100%{
+          top: 0px;
+      }
   }
   @media only screen and (min-width: 890px) {
       h1{
@@ -719,7 +760,7 @@ button{
   }
   #downbar{
       overflow-x: unset !important;
-      z-index: 1000;
+      z-index: 10700;
       opacity: 0;
       transition: all .2s ease-out;
   }
@@ -734,12 +775,14 @@ button{
       border: 1px solid black;
       background: #C7493A;
       overflow-x: unset !important;
+      z-index: 1070;
   }
   #downbar ul li{
       width: max-content;
       height: 100%;
       padding: 4px;
       overflow-x: unset !important;
+      z-index: 1070;
   }
   #downbar ul a:active{
       background: black;
